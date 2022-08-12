@@ -52,7 +52,7 @@ var App = () => {
     const [username, setUsername] = useState();
     const [isVerified, setIsVerified] = useState(0);
     const [avatar, setAvatar] = useState();
-    const [tweet, setTweet] = useState('Bu tweet @efe tarafından #fakegenerator adlı başlık için yazılmıştır https://www.youtube.com');
+    const [tweet, setTweet] = useState('Bu tweet @_efesk tarafından #fakegenerator adlı başlık için yazılmıştır');
     const [retweets, setRetweets] = useState(1423);
     const [quoteTweet, setQuoteTweet] = useState(0);
     const [likes, setLikes] = useState(0);
