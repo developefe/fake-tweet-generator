@@ -161,13 +161,13 @@ var App = () => {
             <div className="tweet-container">
                 <div className="lang">
                     <span 
-                        className={lang === 'tr' && 'active'}
+                        className={lang === 'tr' ? 'active' : undefined}
                         onClick={() => setLang('tr')}
                     >
                         Türkçe
                     </span>
                     <span 
-                        className={lang === 'en' && 'active'}
+                        className={lang === 'en' ? 'active' : undefined}
                         onClick={() => setLang('en')}
                     >
                         English

@@ -23,17 +23,15 @@ html, body {
 
 .main {
     display: flex;
-    align-items: center;
     width: 100%;
-    height: 100%;
+    min-height: calc(100% - 60px);
     padding: 30px;
 }
 
 .tweet-settings{
     width: 50%;
-    height: 100%;
+    min-height: 100%;
     border-right: 1px solid #2f3336;
-    overflow-y: scroll;
 
     h3{
         color: #fff;
@@ -78,7 +76,13 @@ html, body {
                 &:focus {
                     border-bottom: 1px solid #b4b9bd;
                 }
-                
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button,
+                &::-webkit-file-upload-button{
+                -webkit-appearance: none;
+                margin: 0;
+                display: none;
+                }
             }
             select {
                 width: 100%;
@@ -136,7 +140,6 @@ html, body {
     align-items: center;
     flex-direction: column;
     width: 50%;
-    height: 100%;
     position: relative;
 
     .lang{
@@ -307,6 +310,132 @@ html, body {
                 color: #fff;
                 align-items: center;
                 justify-content: space-around;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1600px){
+    .tweet-settings {padding-bottom: 35px;}
+}
+
+@media only screen and (max-width: 1440px){
+    .tweet-settings {
+        width: 40%;
+
+        ul{
+            padding-right: 50px;
+        }
+    }
+    
+    .tweet-container {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+
+    .main {
+        flex-direction: column-reverse;
+        min-height: calc(100% - 60px);
+        height: calc(100% - 60px);
+        overflow: hidden;
+        width: calc(100% - 60px);
+
+        .tweet-settings{
+            width: 100%;
+            min-height: unset;
+            height: 60%;
+            overflow-y: scroll;
+            border-right: 0;
+            padding-bottom: 0;
+
+            ul{
+                padding-right: 0;
+            }
+        }
+
+        .tweet-container {
+            width: 100%;
+            height: calc(50% - 35px);
+            overflow-y: scroll;
+            margin-bottom: 35px;
+
+            .sticky-area {
+                position: unset;
+                transform: unset;
+                padding-top: 85px;
+                margin: auto 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .main {
+        .tweet-settings{
+            height: 50%;
+            position: relative;
+
+            &:before{
+                content: "";
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 200px;
+                background: linear-gradient(0deg, black 10%, transparent 100%);
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .main {
+
+
+        .tweet-settings{
+
+
+            &:before{
+
+            }
+
+            ul{
+
+            }
+        }
+
+        .tweet-container {
+            height: 60%;
+
+            .sticky-area {
+                width: 100%;
+
+                .fetch-info{
+                    width: 100%;
+
+                    .bottom{
+                        flex-direction: column;
+
+                        button{
+                            margin-left: 0;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+                .tweet {
+                    width: calc(100% - 34px);
+
+                    .tweet-content {
+                        width: 100%;
+
+                        p{
+                            font-size: 19px;
+                        }
+                    }
+                }
             }
         }
     }
