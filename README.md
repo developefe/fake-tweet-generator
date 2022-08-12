@@ -3,10 +3,10 @@ Full Responsive + React
 
 ### [Live Site](https://responsive-fake-generator-app-with-react.netlify.app)
 
-Web---
+Web ---
 
-<img src="asssets/web.png">
+<img src="assets/web.png">
 
-Mobile---
+Mobile ---
 
-<img src="asssets/mobile.png">
+<img src="assets/mobile.png">
